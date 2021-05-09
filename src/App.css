@@ -11,7 +11,7 @@ h1 {
   margin-top: 0;
 }
 
-p {
+p, li {
   font-family: 'Alegreya', sans-serif;
   Font-Size: 17px;
   color: white;
@@ -49,19 +49,22 @@ svg {
   -moz-text-fill-color: transparent;
 }
 
+.container {
+  padding: 100px;
+}
+
 .title{
   font-size: 17rem;
   line-height: 0.75;
   letter-spacing:5px;
-  padding: 100px 0px 50px 100px;
+  padding: 0 0 50px 0;
   margin: 0;
   text-align: left;
 }
 
 .landing-text{
   text-align: left;
-  padding-left: 100px;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .technologies-container{
@@ -70,17 +73,52 @@ svg {
   padding: 0 100px 50px 100px;
 }
 
-@media only screen and (max-width: 768px) {
+.NavMenuBtn{
+  display: none;
+}
 
-  .container{
+@media only screen and (max-width: 1280px) {
+
+  .container {
+    padding: 100px;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 19vw;
+    margin: 0 0 60px 0;
+  }
+
+  .landing-text,
+  .code {
+    text-align: left;
+    padding: 20px;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0;    
+  }
+
+  p {
+    font-size: 20px;
     padding: 10px;
   }
 
-  .title{
-    padding: 0;
-    font-size: 5rem;
+  h1 {
     text-align: center;
-    margin: 100px 0 100px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .container{
+    padding: 50px 20px 50px 20px;
+  }
+
+  .title{
+    padding: 10px;
+    font-size: 15vw;
+    text-align: center;
+    margin: 50px 0 100px 0;
   }
 
   .landing-text, .code {
@@ -98,5 +136,13 @@ svg {
 
   h1{
     text-align: center;
+  }
+
+  .NavMenuBtn {
+    display: unset;
+  }
+
+  .hidden{
+    display: none;
   }
 }
